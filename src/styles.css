@@ -1,0 +1,53 @@
+header {
+    display: flex;
+    background-color: #96B6C5;
+}
+
+#business-logo {
+    flex: 1 0 auto;
+    color: white;
+    padding-left: 2rem;
+}
+
+.nav-buttons {
+    display: flex;
+    flex: 0 1 auto;
+    gap: 2rem;
+}
+
+.nav-button {
+    width: 150px;
+    background-color: #96B6C5;
+    color: white;
+    margin: 1rem;
+    border-radius: 8px;
+    font-size: large;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: #96B6C5;
+    transition: .5s;
+}
+
+
+.backgroundContent {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('./images/shattered-plains.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    white-space: nowrap;
+}

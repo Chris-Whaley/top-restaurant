@@ -13,21 +13,15 @@
 
 
 // wine list
-
-
-const createMenu = (function () {
+export default function createMenu() {
 
     const content = document.getElementById('content');
-    const menu = document.createElement('div');
-
     content.innerHTML = "";
+    const menu = document.createElement('div');
 
     menu.classList.add('welcome');
     menu.textContent = 'Menu';
 
     content.appendChild(menu);
     
-    
-})();
-
-export default createMenu;
+};

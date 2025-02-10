@@ -12,15 +12,16 @@ const buttons = document.querySelectorAll('.nav-buttons');
 buttons.forEach(button => {
     button.addEventListener('click', (event) => {
         console.log(event.target.id);
+        
         switch (event.target.id) {
             case 'home':
-                createHome;
+                createHome();
                 break;
             case 'menu':
-                createMenu;
+                createMenu();
                 break;
-            case 'home':
-                createAbout;
+            case 'about':
+                createAbout();
                 break;
             default:
                 break;

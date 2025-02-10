@@ -3,20 +3,15 @@
 // honor
 
 // odium
-
-const createAbout = (function () {
+export default function createAbout() {
 
     const content = document.getElementById('content');
-    const about = document.createElement('div');
-
     content.innerHTML = "";
+    const about = document.createElement('div');
 
     about.classList.add('welcome');
     about.textContent = 'About the Roshar Restaurant';
 
     content.appendChild(about);
     
-    
-})();
-
-export default createAbout;
+};

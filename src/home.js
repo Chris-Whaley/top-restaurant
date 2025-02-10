@@ -2,20 +2,15 @@
 // 
 // title top left, nav buttons to the right
 
-
-const createHome = (function () {
+export default function createHome() {
 
     const content = document.getElementById('content');
-    const welcome = document.createElement('div');
-
     content.innerHTML = "";
+    const welcome = document.createElement('div');
 
     welcome.classList.add('welcome');
     welcome.textContent = 'Welcome to Roshar Restaurant';
 
     content.appendChild(welcome);
     
-    
-})();
-
-export default createHome;
+};

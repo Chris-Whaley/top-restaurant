@@ -64,3 +64,17 @@ header {
     gap: 3rem;
     margin-left: 5%;
 }
+
+.desc-price-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+
+/* FIXME either fix or remove the dotted line attempt */
+.desc-price-buffer {
+    border-bottom: 2px dotted darkgray;
+    width: 50%;
+}
+

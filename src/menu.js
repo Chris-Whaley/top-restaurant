@@ -45,6 +45,11 @@ function createFood() {
     let foodDesc = document.createElement("div");
     let longDesc = document.createElement("div");
     let priceDesc = document.createElement("div");
+    let descPriceContainer = document.createElement("div");
+    descPriceContainer.classList.add("desc-price-container");
+    let blank = document.createElement("span");
+    blank.classList.add("desc-price-buffer");
+
     for (const [k, v] of Object.entries(value)) {
       switch (k) {
         case "nationality":
@@ -57,16 +62,18 @@ function createFood() {
           foodDesc.classList.add(k);
           foodDesc.textContent = v;
           nationalityDesc.appendChild(foodDesc);
+          foodDesc.appendChild(descPriceContainer);
           break;
         case "description":
           longDesc.classList.add(k);
           longDesc.textContent = v;
-          foodDesc.appendChild(longDesc);
+          descPriceContainer.appendChild(longDesc);
+          descPriceContainer.appendChild(blank);
           break;
         case "price":
           priceDesc.classList.add(k);
           priceDesc.textContent = v;
-          foodDesc.appendChild(priceDesc);
+          descPriceContainer.appendChild(priceDesc);
           break;
       }
     }
@@ -136,6 +143,8 @@ function createWines() {
     let strengthDesc = document.createElement("div");
     let longDesc = document.createElement("div");
     let priceDesc = document.createElement("div");
+    let descPriceContainer = document.createElement("div");
+    descPriceContainer.classList.add("desc-price-container");
     for (const [k, v] of Object.entries(value)) {
       switch (k) {
         case "color":
@@ -148,16 +157,17 @@ function createWines() {
           strengthDesc.classList.add(k);
           strengthDesc.textContent = v;
           colorDesc.appendChild(strengthDesc);
+          colorDesc.appendChild(descPriceContainer);
           break;
         case "description":
           longDesc.classList.add(k);
           longDesc.textContent = v;
-          strengthDesc.appendChild(longDesc);
+          descPriceContainer.appendChild(longDesc);
           break;
         case "price":
           priceDesc.classList.add(k);
           priceDesc.textContent = v;
-          strengthDesc.appendChild(priceDesc);
+          descPriceContainer.appendChild(priceDesc);
           break;
       }
     }

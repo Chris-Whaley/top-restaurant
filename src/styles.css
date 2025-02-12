@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+
+body {
+    font-family: "Metamorphous", serif;
+}
+
 header {
     display: flex;
     background-color: #96B6C5;
@@ -50,4 +56,11 @@ header {
     text-align: center;
     font-size: 3rem;
     white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menus {
+    display: grid;
+    gap: 3rem;
+    margin-left: 5%;
 }

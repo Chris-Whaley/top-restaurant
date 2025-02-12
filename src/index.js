@@ -10,24 +10,23 @@ import createAbout from "./about";
 // clears content div
 // populates the button div content
 
-const buttons = document.querySelectorAll('.nav-buttons');
+const buttons = document.querySelectorAll(".nav-buttons");
+createHome();
 
-buttons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        console.log(event.target.id);
-        
-        switch (event.target.id) {
-            case 'home':
-                createHome();
-                break;
-            case 'menu':
-                createMenu();
-                break;
-            case 'about':
-                createAbout();
-                break;
-            default:
-                break;
-        }
-    });
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    switch (event.target.id) {
+      case "home":
+        createHome();
+        break;
+      case "menu":
+        createMenu();
+        break;
+      case "about":
+        createAbout();
+        break;
+      default:
+        break;
+    }
+  });
 });

@@ -60,21 +60,64 @@ header {
 }
 
 .menus {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./images/scroll-paper-background.jpg);
+    background-size: cover;
     display: grid;
-    gap: 3rem;
-    margin-left: 5%;
+    gap: 5rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.nationality,
+.color {
+    font-size: 1.5rem;
+}
+
+
+/* all to put the dotted line between the description and price */
 .desc-price-container {
     display: flex;
-    gap: 2rem;
     justify-content: space-between;
+    font-size: 1rem;
 }
 
+.description {
+    flex: 0 0 auto;
+}
 
-/* FIXME either fix or remove the dotted line attempt */
+.desc-price-container > span {
+    flex: 1 0 auto;
+}
+
+.price {
+    flex: 0 0 auto;
+}
+
 .desc-price-buffer {
     border-bottom: 2px dotted darkgray;
-    width: 50%;
+    /* width: 50%; */
+}
+/* ----------------------------------------------------------- */
+
+#food-menu,
+#wine-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 4rem;
+    
+}
+
+#food-menu > h1,
+#wine-menu > h1 {
+    text-align: center;
+}
+
+.color-strength-container,
+.nationality {
+    display: grid;
+    gap: 0.5rem;
 }
 

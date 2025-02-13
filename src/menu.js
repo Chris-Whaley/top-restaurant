@@ -39,6 +39,10 @@ function createFood() {
     },
   };
   const foodMenu = document.getElementById("food-menu");
+  const foodHeading = document.createElement("h1");
+  foodMenu.appendChild(foodHeading);
+  foodHeading.textContent = "Entrees";
+
   // make a div for each key, text content is the value
   for (const [key, value] of Object.entries(foods)) {
     let nationalityDesc = document.createElement("div");
@@ -59,10 +63,8 @@ function createFood() {
           foodMenu.appendChild(nationalityDesc);
           break;
         case "food":
-          foodDesc.classList.add(k);
-          foodDesc.textContent = v;
-          nationalityDesc.appendChild(foodDesc);
-          foodDesc.appendChild(descPriceContainer);
+          nationalityDesc.textContent = v + " | " + nationalityDesc.textContent;
+          nationalityDesc.appendChild(descPriceContainer);
           break;
         case "description":
           longDesc.classList.add(k);
@@ -134,35 +136,44 @@ function createWines() {
       color: "Purple",
       strength: "Strong",
       description: "Spices sandalwood aroma",
+      price: "10",
     },
   };
   const wineMenu = document.getElementById("wine-menu");
+  const wineHeading = document.createElement("h1");
+  wineMenu.appendChild(wineHeading);
+  wineHeading.textContent = "Wine List";
+
   // make a div for each key, text content is the value
   for (const [key, value] of Object.entries(wines)) {
     let colorDesc = document.createElement("div");
-    let strengthDesc = document.createElement("div");
+    let colorStrengthContainer = document.createElement("div");
+    colorStrengthContainer.classList.add("color-strength-container");
     let longDesc = document.createElement("div");
     let priceDesc = document.createElement("div");
     let descPriceContainer = document.createElement("div");
     descPriceContainer.classList.add("desc-price-container");
+    let blank = document.createElement("span");
+    blank.classList.add("desc-price-buffer");
+
     for (const [k, v] of Object.entries(value)) {
       switch (k) {
         case "color":
           colorDesc.classList.add(k);
           colorDesc.setAttribute("id", v);
           colorDesc.textContent = v;
-          wineMenu.appendChild(colorDesc);
+          wineMenu.appendChild(colorStrengthContainer);
+          colorStrengthContainer.appendChild(colorDesc);
           break;
         case "strength":
-          strengthDesc.classList.add(k);
-          strengthDesc.textContent = v;
-          colorDesc.appendChild(strengthDesc);
-          colorDesc.appendChild(descPriceContainer);
+          colorDesc.textContent += " | " + v;
+          colorStrengthContainer.appendChild(descPriceContainer);
           break;
         case "description":
           longDesc.classList.add(k);
           longDesc.textContent = v;
           descPriceContainer.appendChild(longDesc);
+          descPriceContainer.appendChild(blank);
           break;
         case "price":
           priceDesc.classList.add(k);

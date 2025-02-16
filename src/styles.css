@@ -15,6 +15,10 @@ header {
     padding-left: 2rem;
 }
 
+#business-logo:hover {
+    cursor: pointer;
+}
+
 .nav-buttons {
     display: flex;
     flex: 0 1 auto;
@@ -34,6 +38,7 @@ header {
     background-color: white;
     color: #96B6C5;
     transition: .5s;
+    cursor: pointer;
 }
 
 

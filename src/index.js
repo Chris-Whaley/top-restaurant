@@ -11,7 +11,10 @@ import createAbout from "./about";
 // populates the button div content
 
 const buttons = document.querySelectorAll(".nav-buttons");
+const logo = document.getElementById("business-logo");
 createHome();
+
+logo.addEventListener("click", (event) => createHome());
 
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
